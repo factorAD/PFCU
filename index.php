@@ -200,7 +200,7 @@ echo $response
 			
       <hr />
       <div id="errMsg">
-        
+       
             <?php if(!empty($_SESSION['errMsg'])) { echo $_SESSION['errMsg']; } ?>
         </div>
         <?php unset($_SESSION['errMsg']); ?>
