@@ -1,0 +1,90 @@
+/* CSS STUFF OK */
+
+body{
+	background-color: #fff;
+	font-family: 'Roboto', sans-serif !important;
+/*	font-family: "Arial,sans-serif"; */
+	color: #343434;
+	font-size: 1rem;
+	line-height: 1.5;
+	font-weight: 300;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Roboto', sans-serif !important;
+}
+
+/* header {
+	background-color: #007bff !important;
+	padding: 4px 8px;
+	border-bottom: 1px solid #ccc;
+} */
+
+/* Modify the backgorund color */ 
+.navbar-custom { 
+    background-color: #003a79; 
+    padding: 4px 8px;
+    border-bottom: 1px solid #ccc;
+    height: 3.8rem;
+    z-index: 1;
+} 
+
+/* Modify brand and text color */ 
+.navbar-custom .navbar-brand, 
+.navbar-custom .navbar-text { 
+    color: #000000; 
+} 
+
+.navbar-nav{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    float: none;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+html{
+	overflow-x: hidden;
+}
+
+.row {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.div {
+    display: block;
+}
+
+.util.aligned.center {
+    text-align: center;
+}
+
+.online-enrollment.getting-started .enrollment-icons {
+    margin-bottom: 12px;
+}
+
+.online-enrollment.getting-started .enrollment-icons-text {
+    margin-top: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.fieldlabel {
+    font-size: .975rem;
+    color: #717171 !important;
+    font-weight: 400;
+}
+
+::placeholder {
+    font-size: .750rem;
+    color: #717171 !important;
+}
+
+.button-row-margin {
+    margin-top: 42px;
+    margin-bottom: 42px;
+}
