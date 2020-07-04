@@ -3,35 +3,7 @@ $_SESSION['extra'] = '';
 
 
 ?>
-<?php
-include('config.php');
 
-if(isset($_POST['butlogin'])){
-
-    $username = mysqli_real_escape_string($con,$_POST['txtusername']);
-    $password = mysqli_real_escape_string($con,$_POST['txtpassword']);
-
-    if ($username != "" && $password != ""){
-
-        $sql_query = "select count(*) as cntUser from users.registration where username = '".$username."' and password='".$password."'";
-        $result = mysqli_query($con,$sql_query) or trigger_error("Query Failed! SQL: $sql_query - Error: ".mysqli_error($con), E_USER_ERROR);
-        $row = mysqli_fetch_array($result);
-
-        $count = $row['cntUser'];
-
-        if($count > 0){
-            $_SESSION['username'] = $username;
-            header ('Location: /account/index.php');
-        }else{
-          $_SESSION['errMsg'] = "We can't find that username and password. You can reset your password</a> or try again.";
-        }
-       
-        }
-
-    
-
-}
-?>
 
 <?php
  
