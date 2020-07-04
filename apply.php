@@ -8,19 +8,19 @@ $_SESSION['extra'] = '';
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv = "refresh" content = "3; url = /apply" />
+    <meta http-equiv = "refresh" content = "0;url = '/apply'" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="/css/2020.css"> 
-  <link rel="stylesheet" href="/css/morecss.css">
-  <link rel="stylesheet" href="/css/redirect.css">
+	<link rel="stylesheet" href="../css/2020.css"> 
+  <link rel="stylesheet" href="../css/morecss.css">
+  <link rel="stylesheet" href="../css/redirect.css">
     <title>Pigeon Forge Credit Union</title>
 	
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../favicon.ico" type="image/x-icon">
 	
 	<script src="https://kit.fontawesome.com/c931ff6374.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@ $_SESSION['extra'] = '';
   <body>
   
   
-	<?php include("mainheader.php") ?>
+	<?php include("header.php") ?>
     <!-- start --> 
 
 

@@ -88,7 +88,8 @@ $_SESSION['extra'] = '';
 <div class="container">
 
 
-<form id="registration-form" method="post" action="connect.php" role="form">
+<form id="registration-form" method="post" action="connect.php" role="form"
+oninput='password2.setCustomValidity(password2.value != password.value ? "Passwords do not match." : "")'>
 <div class="form-group">
     <label for="appnum">Application Number</label>
     <input type="text" class="form-control" id="appnum" aria-describedby="Application Number" placeholder="Application number" value="<?php print($_SESSION['rand']); ?>" name="appnum" readonly>
@@ -102,8 +103,12 @@ $_SESSION['extra'] = '';
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Confirm Password</label>
+    <label for="exampleInputPassword1">Password</label>
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" required>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword2">Confirm Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" name="password2" required>
   </div>
   <div class="form-row">
     <div class="col-md-4 mb-3">

@@ -21,7 +21,7 @@ if(isset($_POST['butlogin'])){
 
         if($count > 0){
             $_SESSION['username'] = $username;
-            header ('Location: /account/index2.php');
+            header ('Location: /account/index.php');
         }else{
           $_SESSION['errMsg'] = "We can't find that username and password. You can reset your password</a> or try again.";
         }
@@ -101,7 +101,7 @@ echo $response
   </head>
   <body>
   
-	<?php include("header.php") ?>
+	<?php include("indexheader.php") ?>
 	<div class="row bg-overlay">
 
 
@@ -136,7 +136,7 @@ echo $response
       
           <div class="input-group">
             <span class="input-group-addon mr-1"><i class="fa fa-user fa-2x"></i></span>
-            <input type="text" class="form-control ml-1" id="uname" name="uname" placeholder="Username" required="required"></input>
+            <input type="text" class="form-control ml-1" id="uname" name="uname" placeholder="Username" required="required" maxlength="20"></input>
           </div>
 <br> </br>
        <div id="spacer"></div>
@@ -290,7 +290,7 @@ echo $response
     
     <div class="spacer"></div>
 		<div class="spacer"></div>
-<section class="home-section" id="earn more">
+<section class="home-section" id="earnlink">
 	<header class="section-header">
 		<h2 class="home-h2">
 			Earn <strong>More.</strong>
@@ -406,8 +406,10 @@ Earn more interest, more returns, and more rewards with Pigeon Forge Credit Unio
           location.href = "/redirect3.php";
       } 
     </script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
+
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

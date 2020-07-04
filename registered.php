@@ -21,7 +21,7 @@ if(isset($_POST['butlogin'])){
 
         if($count > 0){
             $_SESSION['username'] = $username;
-            header ('Location: /account/index2.php');
+            header ('Location: /account/index.php');
         }else{
           $_SESSION['errMsg'] = "We can't find that username and password. You can reset your password</a> or try again.";
         }
@@ -101,7 +101,7 @@ echo $response
   </head>
   <body>
   
-	<?php include("header.php") ?>
+	<?php include("indexheader.php") ?>
 	<div class="row bg-overlay">
 
 

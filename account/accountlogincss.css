@@ -1,0 +1,65 @@
+#logontron{
+    display: absolute;
+    height: 26.250rem !important;
+    width: 23rem !important;
+    background-color: #fff;
+
+}
+
+.usernameinput {
+    width: 24rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+}
+
+#txtusername #txtpassword {
+    height: 2.5rem;
+    padding: 5px;
+    font-size: 1.125rem;
+    margin: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.logintitle {
+    margin-top: .650rem;
+    font-size: 1.474rem;
+    text-align: center;
+    font-family: "logofont" !important;;
+    
+}
+
+.dropdown-menu {animation:myDelay .15s forwards}
+@keyframes myDelay{
+    0%{opacity:0;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}
+
+.btn-signout {
+	max-width: 100%;
+	min-width: auto;
+	height: 40px;
+	margin: auto;
+	padding: .65rem 1.516rem;
+	border-width:1px;
+	text-align: center !important;
+	font-size:.895rem;
+	line-height: 1;
+	font-weight: 10;
+	border-radius: 36px;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	font-family: "logofont";
+	transition: all .4s ease;
+	box-sizing: border-box;
+	cursor: pointer;
+  padding-left: 1.3rem;
+  border-color: transparent;
+  background-color: #efeeee;
+  color: #00adf2;
+}
+
+

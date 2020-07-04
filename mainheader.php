@@ -17,7 +17,7 @@
       
       <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">
-          <a class="nav-link whypfcu" href="../why-pfcu">Why PFCU</a>
+          <a class="nav-link whypfcu" href="/why-pfcu">Why PFCU</a>
         </li>
 
 
@@ -68,13 +68,8 @@
             <button type="submit" class="btn btn-outline-light">Search</button>
           </form>
 -->
-<li>
-            <form method='post' action="">
-                <button type="submit" id="but_logout" name="but_logout" class="btn btn-light btn-signout">Sign out</button>
-</form>
-</li>
-
-<a class="btn btn-light btn-apply" button type="submit" a href="#">Open new account</a>
+<a class="btn btn-light btn-securelogin" button type="submit" a href="/account/login.php"><i class="fa fa-lock mr-1" aria-hidden="true"></i>Secure Banking Login</a>
+<a class="btn btn-light btn-apply" button type="submit" a href="/apply">Become a Member</a>
 </ul>
 <div class="search-form w-form">
         <form class="form-inline">

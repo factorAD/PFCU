@@ -1,6 +1,6 @@
 <header>
 
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fff;">
+<nav class="navbar navbar-expand-lg navbar-light loginheader" style="background-color: #fff;">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
       <img src="/img/pigeon.png" width="30" height="30" class="d-inline-block align-top" alt="PFCU"></a>
@@ -17,7 +17,7 @@
       
       <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">
-          <a class="nav-link whypfcu" href="../why-pfcu">Why PFCU</a>
+          <a class="nav-link whypfcu" href="/redirect.php">Why PFCU</a>
         </li>
 
 
@@ -59,22 +59,12 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown" href="/redirect.php">ATM & Branch</a>
         </li>
-
-<li class="nav-item dropdown">
-        <div aria-hidden="true" class="nav-separator"></div>
-</li>
         <!-- <form class="form-inline">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button type="submit" class="btn btn-outline-light">Search</button>
           </form>
 -->
-<li>
-            <form method='post' action="">
-                <button type="submit" id="but_logout" name="but_logout" class="btn btn-light btn-signout">Sign out</button>
-</form>
-</li>
 
-<a class="btn btn-light btn-apply" button type="submit" a href="#">Open new account</a>
 </ul>
 <div class="search-form w-form">
         <form class="form-inline">

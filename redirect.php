@@ -14,9 +14,9 @@ $_SESSION['extra'] = '';
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="/css/2020.css"> 
-  <link rel="stylesheet" href="/css/morecss.css">
-  <link rel="stylesheet" href="/css/redirect.css">
+	<link rel="stylesheet" href="../css/2020.css"> 
+  <link rel="stylesheet" href="../css/morecss.css">
+  <link rel="stylesheet" href="../css/redirect.css">
     <title>Pigeon Forge Credit Union</title>
 	
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -30,7 +30,7 @@ $_SESSION['extra'] = '';
   <body>
   
   
-	<?php include("header.php") ?>
+	<?php include("mainheader.php") ?>
     <!-- start --> 
 
 

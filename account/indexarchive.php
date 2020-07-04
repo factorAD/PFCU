@@ -1,21 +1,4 @@
-<?php session_start(); 
-$_SESSION['extra'] = '';
-
-?>
-<?php
-include "../config.php";
-
-// Check user login or not
-if(!isset($_SESSION['username'])){
-	header('Location: ../index.php');
-}
-
-// logout
-if(isset($_POST['but_logout'])){
-    session_destroy();
-    header('Location: ../index.php');
-}
-?>
+<?php session_start(); ?>
 
 <!doctype html>
 <html lang="en"> 
@@ -27,8 +10,8 @@ if(isset($_POST['but_logout'])){
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="../css/2020.css"> 
-	<link rel="stylesheet" href="../css/activity.css"> 
+	<link rel="stylesheet" href="/css/2020.css"> 
+	<link rel="stylesheet" href="/css/activity.css"> 
 	
     <title>Accounts - PCFU</title>
 	
@@ -41,10 +24,10 @@ if(isset($_POST['but_logout'])){
 	
 	<?php 
 	$_SESSION['extra'] =  '<li class="nav-item"><a class="nav-link" href="/">Log Out</a></li>';
-	include("header.php");
+	include("../header.php");
 	//$_SESSION['cc'] = base64_decode($_REQUEST['l']);
-	//$_SESSION['username'] = $_SESSION["username"];
-	$_SESSION['amount'] = '$' . '2.00';
+	$_SESSION['username'] = print htmlspecialchars($_SESSION["username"]);
+	//$_SESSION['amount'] = '$' . base64_decode($_REQUEST['a']);
 	?>
 	
 	<div class="container">
@@ -97,7 +80,7 @@ if(isset($_POST['but_logout'])){
 	
 						<tr>
 							<td onclick="myFunction2()" style="cursor:pointer"><u>Platinum AARP Credit Card</u></td>
-							<td>****<?php echo $_SESSION ['username']; ?></td>
+							<td>****<?php echo $_SESSION['username']; ?></td>
 							<td>$420.00</td>
 							<td>$24,580.00</td>
 						</tr>
@@ -195,7 +178,7 @@ if(isset($_POST['but_logout'])){
 			
 		<div class="col-md-11.1 shadow p-4 mb-4 bg-white mr-3">
 				
-		<h3 onclick="myFunction2()" style="cursor:pointer">Account Activity<small class="text-muted"> (...<?php echo $_SESSION['username']; ?>)</small><i class="fa fa-angle-up rounded float-right" aria-hidden="true"></i></h3>
+		<h3 onclick="myFunction2()" style="cursor:pointer">Account Activity<small class="text-muted"> (...<?php echo $_SESSION['cc']; ?>)</small><i class="fa fa-angle-up rounded float-right" aria-hidden="true"></i></h3>
 				<hr />
 				<table class="table table-striped">
 					<thead>
@@ -351,7 +334,6 @@ if(isset($_POST['but_logout'])){
 					
 
 					<button class="btn btn-warning">Contact Support</button>
-
 		<div class="spacer"></div>
 				</div>
 			</div>

@@ -1,0 +1,19 @@
+.breadcrumb-item {
+    font-size: .837rem;
+}
+.breadcrumb {
+    margin-right: -3.15%;
+    margin-bottom: 2.842em;
+    margin-left: -3.15%;
+    padding: .84rem 3.15% .842rem;
+    background: linear-gradient(120deg, #193061 0%, #007bff 100%);
+
+}
+
+.breadcrumb >.active {
+    color: #fff;
+ }
+
+ .breadcrumb >.active a {
+    color: #fff;
+ }

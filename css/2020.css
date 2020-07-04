@@ -43,7 +43,7 @@ html{
 
 /* Navigation bar style start */ 
 .navbar .nav-item:not(:last-child) {
-	margin-right: 35px;
+	/* margin-right: 25px; */
   }
   
   .dropdown-toggle::after {
@@ -75,6 +75,14 @@ html{
 	background-size: cover;
 	background-position: center center;
 	height: 550px;
+	color: fff;
+}
+.bg-login{
+	background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('../img/smokies.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 750px;
 	color: fff;
 }
 
@@ -136,7 +144,7 @@ html{
     width: 100%;
     height: 38px;
     padding: 8px 12px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     font-size: 14px;
     line-height: 1.428571429;
     color: #333;
@@ -150,7 +158,7 @@ html{
     right: 0;
     width: 2.579rem;
     height: 1.579rem;
-    padding: 0;
+    padding: 1rem;
     background-color: transparent;
     background-image: url('/img/search-glass.png');
     background-position: 50% 50%;
@@ -173,6 +181,7 @@ background-color: rgb(26, 142, 236, 0.3);
 
 }
 
+
 .form-check {
 	color: #666;
 	font-size: .8375rem;
@@ -186,7 +195,7 @@ background-color: rgb(26, 142, 236, 0.3);
 }
 
 #errMsg{
-	padding-bottom: 10px;
+	padding-bottom: 8px;
 	color: #bf2155;
 }
 
@@ -201,3 +210,179 @@ background-color: rgb(26, 142, 236, 0.3);
 #sticky-footer {
 	flex-shrink: none;
   }
+
+  .btn-apply {
+	max-width: 100%;
+	min-width: auto;
+	height: 40px;
+	margin: auto;
+	padding: .65rem 1.516rem;
+	border-width:1px;
+	text-align: center !important;
+	font-size:.895rem;
+	border: 2px solid #007bff;
+    border-radius: 36px;
+	background-color: #007bff;
+	transition: color 200ms ease,all 200ms ease;
+	color: #fff;
+	line-height: 1;
+    font-weight: 10;
+    text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	font-family: "logofont";
+	transition: all .4s ease;
+	box-sizing: border-box;
+	cursor: pointer;
+	margin-left: 1.1rem;
+	/* height: 2.4em;
+    line-height: 2.4em; */
+  }
+
+.btn-securelogin {
+	max-width: 100%;
+	min-width: auto;
+	height: 40px;
+	margin: auto;
+	padding: .65rem 1.516rem;
+	border-width:1px;
+	text-align: center !important;
+	font-size:.895rem;
+	line-height: 1;
+	font-weight: 10;
+	border-radius: 36px;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	font-family: "logofont";
+	transition: all .4s ease;
+	box-sizing: border-box;
+	cursor: pointer;
+  padding-left: 1.3rem;
+  border-color: transparent;
+  background-color: #efeeee;
+  color: #00adf2;
+}
+
+
+
+  .dropdown {
+	color: #343434;
+	font-size: 1rem;
+	font-weight: 650;
+	padding: 10px 20px;
+    display: block;
+    position: relative;
+    vertical-align: top;
+	text-decoration: none;
+	text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+	white-space: nowrap;
+	background-color: transparent;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+  
+/* .whypfcu {
+	color: #343434;
+	font-size: 1rem;
+	font-weight: 650;
+    display: block;
+    position: relative;
+    
+	text-decoration: none;
+	text-align: right;
+    margin-left: auto;
+    margin-right: auto;
+	white-space: nowrap;
+	background-color: transparent;
+	box-sizing: border-box;
+	cursor: pointer;
+
+} */
+
+@font-face {
+	font-family: "logofont";
+	src: url(../fonts/Montserrat-Regular.ttf);
+}
+.logofont {
+	font-family: "logofont";
+	transition: all .4s ease;
+	background: transparent;
+	box-sizing: border-box;
+	cursor: pointer;
+	height: 2.4em;
+    line-height: 2.4em;
+	
+}
+
+.sub-menu-link {
+    color: #343434;
+    font-size: 1rem;
+	font-weight: 700;
+	position: relative;
+    vertical-align: top;
+    text-decoration: none;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+	background-color: transparent;
+}
+
+.sub-menu {
+	font-size: .899rem;
+	font-weight: 400;
+	display: block;
+	color: #222;
+	position: relative;
+    vertical-align: top;
+    text-decoration: none;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap
+	
+}
+
+.dropdown-menu{animation:myDelay .15s forwards}
+@keyframes myDelay{
+    0%{opacity:0;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}
+
+.nav-separator {
+    width: 1px;
+    height: 14px;
+    max-width: 1px;
+	margin-right: 15px;
+	padding-top: 2.4rem;
+    /* margin-bottom: .842rem; */
+    margin-left: 15px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 1px;
+    -ms-flex: 0 0 1px;
+    flex: 0 0 1px;
+    background-color: #c4c4c4;
+}
+
+.button {
+    max-width: 100%;
+    min-width: 14.263rem;
+    margin-bottom: 2.632rem;
+    padding: .9rem 1.316rem;
+    border: 2px solid #f99400;
+    border-radius: 36px;
+    background-color: #f99400;
+    -webkit-transition: color 200ms ease,all 200ms ease;
+    transition: color 200ms ease,all 200ms ease;
+    color: #fff;
+    font-size: 1.158rem;
+    line-height: 1;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+}

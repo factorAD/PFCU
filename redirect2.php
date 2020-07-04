@@ -30,7 +30,7 @@ $_SESSION['extra'] = '';
   <body>
   
   
-	<?php include("header.php") ?>
+	<?php include("mainheader.php") ?>
     <!-- start --> 
 
 
