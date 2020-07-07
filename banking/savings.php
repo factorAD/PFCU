@@ -19,7 +19,7 @@ $_SESSION['extra'] = '';
   <link rel="stylesheet" href="../css/morecss.css">
   <link rel="stylesheet" href="../banking/bankingcss.css">
   <link rel="stylesheet" href="../css/redirect2.css">
-    <title>Checking Accounts | Pigeon Forge Credit Union</title>
+    <title>Savings Accounts | Pigeon Forge Credit Union</title>
 	
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon">
@@ -37,7 +37,7 @@ $_SESSION['extra'] = '';
     <li class="breadcrumb-item active ml-4"><a href="#">Home</a></li>
     <li class="breadcrumb-item active"><a href="#">Personal</a></li>
     <li class="breadcrumb-item active"><a href="#">Bank</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Checking Accounts</li>
+    <li class="breadcrumb-item active" aria-current="page">Savings Accounts</li>
   </ol>
 </nav>
 
@@ -47,17 +47,15 @@ $_SESSION['extra'] = '';
 
 
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-      <h1 class="display-4 text-justify">Checking Accounts</h1>
+      <h1 class="display-4 text-justify">Savings Accounts</h1>
       <figure class="featured-image">
-      <img class="mb-4" src="../img/checking-accounts.jpg"  alt sizes="(max-width: 479px) 92vw, (max-width: 767px) 94vw, (max-width: 991px) 66vw, 65vw"></i>
+      <img class="mb-4" src="../img/savings-accounts.jpg"  alt sizes="(max-width: 479px) 92vw, (max-width: 767px) 94vw, (max-width: 991px) 66vw, 65vw"></i>
 
-      <p class="lead text-justify">With our checking accounts, LESS is MORE.</p>
-      <p class="text-justify">A lot of banks seem to have a fee for everything. Fortunately, we’re not a bank. We want to help you pay less,
-      so we provide our members with a free debit/ATM card, free online banking and mobile banking, direct deposit with free automatic transfers, and unlimited check writing.
-       Less interest, less in fees — and a lot less hassle.</p>
-      <p class="text-justify">Not only do we want to help you pay less for checking services, we want to help you earn more. Which is why 
-      Money  magazine called our 3% Max Checking account, “The Best Checking Account in America.” So whether you’re opening your first account to help make the most of your hard-earned dollars or looking for an account that grows with your investments,
-       we have the perfect account for you.</p>
+      <p class="lead text-justify">More ways to earn more.</p>
+      <p class="text-justify">Save for a rainy day. Or a vacation, or car, or house. No matter what you are saving for, we help members earn more and pay less. That’s why we offer a wide variety of
+       savings options, including CDs, HSAs and IRAs. Because we don’t have shareholders like traditional banks, our savings accounts typically earn more than similar accounts at traditional
+        banks. It’s another good reason why you'll love banking here. You worked hard for your money. Now it’s time to sit back and let it work for you.</p>
+ 
       
     </div>
 
@@ -65,16 +63,16 @@ $_SESSION['extra'] = '';
       <div class="card-deck mb-3 text-center">
         <div class="card mb-4 box-shadow">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Max Checking</h4>
+            <h4 class="my-0 font-weight-normal">Member Savings</h4>
           </div>
           <div class="card-body">
           <div class="rates-label">Earn up to</div>
-            <h1 class="card-title pricing-card-title rates-value">3.00%</h1>
+            <h1 class="card-title pricing-card-title rates-value">0.25%</h1>
             <ul class="list-unstyled mt-3 mb-4">
-              <li class="text-justify">&#9642; 3.00% APY on balances of up</li>
-              <li class="text-justify ml-2"> to $15,000</li>
-              <li class="text-justify">&#9642; No minimum balance required</li>
-              <li class="text-justify">&#9642; Totally free – no monthly fees</li>
+              <li class="text-justify">&#9642; $300.00 minimum daily balance</li>
+              <li class="text-justify ml-2"> to avoid a $5.00 monthly fee</li>
+              <li class="text-justify">&#9642; $5.00 to open the account</li>
+              <li class="text-justify">&#9642; Sub savings accounts</li>
               <li class="text-justify">&#9642; And more benefits!</li>
             </ul>
             <a href="/apply" type="button" class="btn btn-lg ww-button">Open an Account</a>
@@ -82,17 +80,16 @@ $_SESSION['extra'] = '';
         </div>
         <div class="card mb-4 box-shadow">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Free Checking</h4>
+            <h4 class="my-0 font-weight-normal">Max Savings</h4>
           </div>
           <div class="card-body">
-          <div class="rates-label">&nbsp; </div>
-          <h1 class="card-title pricing-card-title rates-value">NO FEES</h1>
-          <ul class="list-unstyled mt-3 mb-4">
-
-              <li class="text-justify">&#9642; Free debit card and free</li>
-              <li class="text-justify ml-2"> PFCU ATM use</li>
-              <li class="text-justify">&#9642; Free starter checks</li>
-              <li class="text-justify">&#9642; Free online banking</li>
+          <div class="rates-label">Earn up to</div>
+            <h1 class="card-title pricing-card-title rates-value">1.50%</h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li class="text-justify">&#9642; Earn up to 1.50% on balances</li>
+              <li class="text-justify ml-2"> over $250,000</li>
+              <li class="text-justify">&#9642; No minimum deposit</li>
+              <li class="text-justify">&#9642; 1% APY 100k-250k</li>
               <li class="text-justify">&#9642; And more benefits!</li>
             </ul>
             <a href="/apply" type="button" class="btn btn-lg ww-button">Open an Account</a>
@@ -100,16 +97,16 @@ $_SESSION['extra'] = '';
         </div>
         <div class="card mb-4 box-shadow">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Max Checking</h4>
+            <h4 class="my-0 font-weight-normal">Holiday Club</h4>
           </div>
           <div class="card-body">
           <div class="rates-label">Earn up to</div>
-            <h1 class="card-title pricing-card-title rates-value">0.35%</h1>
+            <h1 class="card-title pricing-card-title rates-value">0.25%</h1>
             <ul class="list-unstyled mt-3 mb-4">
-              <li class="text-justify">&#9642; Save more, earn more with </li>
-              <li class="text-justify ml-2">tiered interest rates</li>
-              <li class="text-justify">&#9642; Interest computed daily</li>
-              <li class="text-justify">&#9642; Free online and mobile banking</li>
+              <li class="text-justify">&#9642; Save for the holidays, vacations </li>
+              <li class="text-justify ml-2"> birthdays, weddings</li>
+              <li class="text-justify">&#9642; Make deposits all year long</li>
+              <li class="text-justify">&#9642; Interest deposited September</li>
               <li class="text-justify">&#9642; And more benefits!</li>
             </ul>
             <a href="/apply" type="button" class="btn btn-lg ww-button">Open an Account</a>

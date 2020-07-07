@@ -84,6 +84,7 @@ html{
 	background-position: center center;
 	height: 750px;
 	color: fff;
+	/*filter: drop-shadow(0 0 10px black); */
 }
 
 /* .container-fluid{
@@ -361,7 +362,7 @@ background-color: rgb(26, 142, 236, 0.3);
 	margin-right: 15px;
 	padding-top: 2.4rem;
     /* margin-bottom: .842rem; */
-    margin-left: 15px;
+    margin-left: 5px;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 1px;
     -ms-flex: 0 0 1px;
@@ -385,4 +386,65 @@ background-color: rgb(26, 142, 236, 0.3);
     font-weight: 400;
     text-align: center;
     text-decoration: none;
+}
+
+.footer-bottom-wrapper.page-wrapper {
+    padding-right: 0%;
+    padding-left: 0%;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.footer-bottom-wrapper {
+display: flex;
+padding: 2.632rem 5%;
+-webkit-box-align: start;
+-webkit-align-items: flex-start;
+-ms-flex-align: start;
+align-items: flex-start;
+}
+
+.page-wrapper {
+    display: block;
+    max-width: 65.789rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.btn-signout {
+	max-width: 100%;
+	min-width: auto;
+	height: 40px;
+	margin: auto;
+	padding: .65rem 1.516rem;
+	border-width:1px;
+	text-align: center !important;
+	font-size:.895rem;
+	line-height: 1;
+	font-weight: 10;
+	border-radius: 36px;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	font-family: "logofont";
+	transition: all .4s ease;
+	box-sizing: border-box;
+	cursor: pointer;
+  padding-left: 1.3rem;
+  border-color: transparent;
+  background-color: #efeeee05;
+  color: #00adf2;
+  margin-top: 0.725rem !important;
+}
+
+.rates-value {
+    font-size: 2.247rem;
+    margin-bottom: .897rem;
+    color: #007bff;
+
 }

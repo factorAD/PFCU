@@ -29,7 +29,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
             <a class="dropdown-item dropdown sub-menu-link" href="/redirect.php"><h4><strong>Bank</strong></h4></a>
             <a class="dropdown-item sub-menu" href="/banking/checking.php">Checking ></a>
-            <a class="dropdown-item sub-menu" href="/redirect.php">Savings ></a>
+            <a class="dropdown-item sub-menu" href="/banking/savings.php">Savings ></a>
             <a class="dropdown-item sub-menu" href="/redirect.php">Certificates of Deposits (CDs) ></a>
             <a class="dropdown-item sub-menu" href="/redirect.php">Credit Cards ></a>
             <div class="dropdown-divider"></div>
@@ -59,11 +59,40 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown" href="/redirect.php">ATM & Branch</a>
         </li>
+
+        <li class="nav-item dropdown">
+        <div aria-hidden="true" class="nav-separator"></div>
+</li>
         <!-- <form class="form-inline">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button type="submit" class="btn btn-outline-light">Search</button>
           </form>
 -->
+
+
+<?php if( isset($_SESSION['username']) && !empty($_SESSION['username']) )
+{
+?>
+<li class="nav-item dropdown">
+<a class="btn btn-light btn-apply dropdown-toggle mr-2" data-toggle="dropdown" button type="submit" a href="/account"><?php echo $_SESSION['username'];?></a>
+<ul class = "dropdown-menu" role = "menu">
+<!-- <div class="dropdown-menu"> -->
+                    <a href="/account" class="dropdown-item">My account</a>
+                    <a href="#" class="dropdown-item">Open new account</a>
+                    <form method='post' action="">
+                <button type="submit" id="but_logout" name="but_logout" class="btn btn-light btn-signout">Sign out</button>
+            </form>
+      </ul>
+<!-- </div> -->
+    <!-- <li>
+           <form method='post' action="">
+                <button type="submit" id="but_logout" name="but_logout" class="btn btn-light btn-signout">Sign out</button>
+            </form>
+    </li> -->
+
+    <?php }else{ ?>
+
+
 <a class="btn btn-light btn-securelogin" button type="submit" a href="/account/login.php"><i class="fa fa-lock mr-1" aria-hidden="true"></i>Secure Banking Login</a>
 <a class="btn btn-light btn-apply" button type="submit" a href="/apply">Become a Member</a>
 </ul>
@@ -73,7 +102,7 @@
         <input type="submit" class="search-button w-button" value="Search">
 </form>
 </div>
-
+<?php } ?>
 
       </ul>
       

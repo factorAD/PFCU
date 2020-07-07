@@ -47,7 +47,7 @@ if(isset($_POST['butlogin'])){
 	<link rel="stylesheet" href="../css/2020.css"> 
   <link rel="stylesheet" href="../css/morecss.css">
   <link rel="stylesheet" href="../css/redirect2.css">
-  <link rel="stylesheet" href="accountlogincss.css">
+  <link rel="stylesheet" href="../account/accountlogincss.css">
     <title>Sign in | Pigeon Forge Credit Union</title>
 	
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
@@ -61,7 +61,7 @@ if(isset($_POST['butlogin'])){
   <body>
 
   <?php include("loginheader.php") ?>
-  <div class="row bg-login">
+  <div class="row bg-login box_shadow">
 
  
  
@@ -156,6 +156,45 @@ if(isset($_POST['butlogin'])){
 </div>
  </div>
 </div>
+<div class="container">
+<footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+          <div class="col-12 col-md">
+            <img class="mb-2" src="../img/pigeon.png" alt="" width="24" height="24">
+            <small class="d-block mb-3 text-muted">&copy; 2020</small>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Branch & ATM Locations</a></li>
+        <li><a class="text-muted" href="#">(800 969-8762)</a></li>
+        <li><a class="text-muted">NMLS: 553781</a></li>
+        <li><a class="text-muted" href="#"><i class="fas fa-comment"></i> Chat</a></li>
+        <li><a class="text-muted" href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> Schedule Appointmennt</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About Us</h5>
+            <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Member Perks</a></li>
+        <li><a class="text-muted" href="#">Help Center</a></li>
+        <li><a class="text-muted" href="#">Contact Us</a></li>
+        <li><a class="text-muted" href="#">Company Profile</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+          <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Careers</a></li>
+        <li><a class="text-muted" href="#">News Center</a></li>
+        <li><a class="text-muted" href="#">Privacy</a></li>
+        <li><a class="text-muted" href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+</div>
+
 
         <!-- Optional JavaScript -->
     <script>

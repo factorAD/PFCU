@@ -25,8 +25,8 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
             <a class="dropdown-item" href="/redirect.php"><h4><strong>Bank</strong></h4></a>
-            <a class="dropdown-item" href="/redirect.php">Checking ></a>
-            <a class="dropdown-item" href="/redirect.php">Savings ></a>
+            <a class="dropdown-item sub-menu" href="/banking/checking.php">Checking ></a>
+            <a class="dropdown-item sub-menu" href="/banking/savings.php">Savings ></a>
             <a class="dropdown-item" href="/redirect.php">Certificates of Deposits (CDs) ></a>
             <a class="dropdown-item" href="/redirect.php">Credit Cards ></a>
             <div class="dropdown-divider"></div>

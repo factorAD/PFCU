@@ -1,8 +1,29 @@
 <?php session_start(); 
 $_SESSION['extra'] = '';
 
-
 ?>
+
+
+<!-- connects to DB; checks if logged in by calling session[username], if so, queries DB to get respective first name, sets session variable so can be called later -->
+<?php
+include('config.php'); /* connection to database */ 
+
+if(isset($_SESSION['username'])){ /* checks if user is logged in by checking session username. if usernames arent a unique characteristic, change */ 
+
+$sessionUser = mysqli_real_escape_string($con, $_SESSION['username']); /* attaches variable $sessionUser to username characteristic */  
+$sql_query="SELECT * FROM users.registration WHERE username='$sessionUser'"; /* selects all user data from database "users" table "registration" */
+$result = mysqli_query($con,$sql_query) or trigger_error("Query Failed! SQL: $sql_query - Error: ".mysqli_error($con), E_USER_ERROR); 
+$row = mysqli_fetch_array($result);
+$firstName = $row['firstName']; /* attaches variable $firstName to the query retrieved from the table row "firstName" */
+$lastName = $row['lastName'];
+$_SESSION['firstName'] = $firstName; /* makes it a callable variable throughout the rest of index.php */
+$_SESSION['lastName'] = $lastName;
+}
+?>
+
+
+
+
 <?php
 include('config.php');
 
@@ -10,6 +31,7 @@ if(isset($_POST['butlogin'])){
 
     $username = mysqli_real_escape_string($con,$_POST['txtusername']);
     $password = mysqli_real_escape_string($con,$_POST['txtpassword']);
+
 
     if ($username != "" && $password != ""){
 
@@ -27,54 +49,18 @@ if(isset($_POST['butlogin'])){
         }
        
         }
-
-    
-
 }
 ?>
-
 <?php
- 
-//The names of the POST variables that we want to send
-//to the external website.
-$postVars = array('uname', 'aemail', 'apassword');
- 
-//An array to hold the data that we'll end up sending. 
-//Empty by default.
-$postData = array();
- 
-//Attemp to find the POST variables that we want to send.
-foreach($postVars as $uname){
-    if(isset($_POST[$uname])){
-        $postData[$uname] = $_POST[$uname];
-    }
+include('config.php');
+// logout
+if(isset($_POST['but_logout'])){
+  session_destroy();
+  header('Location: ../index.php');
 }
- 
-//Setup cURL
-$ch = curl_init();
- 
-//The site we'll be sending the POST data to.
-curl_setopt($ch, CURLOPT_URL, "/apply/index.php");
- 
-//Tell cURL that we want to send a POST request.
-curl_setopt($ch, CURLOPT_POST, 1);
- 
-//Attach our POST data.
-curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
- 
-//Tell cURL that we want to receive the response that the site
-//gives us after it receives our request.
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
- 
-//Finally, send the request.
-$response = curl_exec($ch);
- 
-//Close the cURL session
-curl_close($ch);
- 
-//Do whatever you want to do with the output.
-echo $response
 ?>
+
+
 
 <!doctype html>
 <html lang="en"> 
@@ -205,7 +191,18 @@ echo $response
         </div>
         <?php unset($_SESSION['errMsg']); ?>
 
-			
+
+<!-- If logged in, show refer a friend div. Calls session variable firstname to display to user-->
+<?php if( isset($_SESSION['firstName']) && !empty($_SESSION['firstName']) )
+{
+?>			
+<h1 class="card-title pricing-card-title rates-value"><?php echo $_SESSION['firstName'];?>,</h1>
+
+<h3>Earn up to $500 by referring friends.</h3>
+<p>Use the link below to invite your friends to bank with Chase. You'll get $50 for each friend who opens a new account</p>
+<button class="btn btn-success" data-toggle="modal" data-target="#refer">Invite friends</button>
+<!-- if not logged in, show something else -->
+<?php }else{ ?>
 			<form method="post" action="">
 				<div class="row">
 				
@@ -242,6 +239,7 @@ echo $response
 <a href="#" data-toggle="modal" data-target="#pwmodal">
   Forgot username/password?
 </a>
+<?php } ?>
 
 <!-- Modal -->
 <div class="modal fade" id="pwmodal" tabindex="-1" role="dialog" aria-labelledby="pwmodal" aria-hidden="true">
@@ -280,6 +278,47 @@ echo $response
   </div>
 </div>
 </div>
+<!-- Modal FOR REFER A FRIEND-->
+<div class="modal fade" id="refer" tabindex="-1" role="dialog" aria-labelledby="refer" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="text-center" id="refer">Refer a friend by email</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		  <div class="col-md-12">
+			  <div class="panel panel-default">
+				  <div class="panel-body">
+					  <div class="text-center">
+						  <p> Enter your friends email address and we'll send them a unique sign-up link. They must use this link to get your cash bonus.</p>
+						  <div class="panel-body">
+							  <fieldset>
+								  <div class="form-group">
+									  <input class="form-control input-lg" placeholder="E-mail Address" name="email" type="email">
+								</div>
+<input class="btn btn-lg btn-primary btn-block" value="Send referral link" type="submit" onclick=" relocate_home()">
+</fieldset>
+							</div>
+						</div>
+					</div>
+				</div>
+	  </div>
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
 <div>
 
 			<br />
@@ -289,7 +328,7 @@ echo $response
 		</div>
     
     <div class="spacer"></div>
-		<div class="spacer"></div>
+    <div class="spacer"></div>
 <section class="home-section" id="earnlink">
 	<header class="section-header">
 		<h2 class="home-h2">

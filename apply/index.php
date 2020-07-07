@@ -113,7 +113,7 @@ oninput='password2.setCustomValidity(password2.value != password.value ? "Passwo
   <div class="form-row">
     <div class="col-md-4 mb-3">
       <label for="validationCustom01">First name</label>
-      <input type="text" class="form-control" id="validationCustom01" placeholder="First name" name="firstName" required>
+      <input type="text" class="form-control" id="validationCustom01" placeholder="First name" name="firstName" onkeydown="limit(this);" onkeyup="limit(this);" required>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -248,13 +248,22 @@ oninput='password2.setCustomValidity(password2.value != password.value ? "Passwo
           location.href = "../redirect.php";
       } 
     </script>
-  
+<script>
+function limit(element)
+{
+    var max_chars = 25;
+
+    if(element.value.length > max_chars) {
+        element.value = element.value.substr(0, max_chars);
+    }
+}
+</script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-
+    
 </body>
 </html>

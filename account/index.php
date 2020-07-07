@@ -28,7 +28,7 @@ if(isset($_POST['but_logout'])){
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="../css/2020.css"> 
-	<link rel="stylesheet" href="../account/accountlogin.css">
+	<link rel="stylesheet" href="../account/accountlogincss.css">
 	<link rel="stylesheet" href="../css/activity.css"> 
 	
     <title>Accounts - PCFU</title>

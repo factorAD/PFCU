@@ -273,3 +273,23 @@ a:-webkit-any-link {
     cursor: pointer;
     text-decoration: none;
 }
+
+.site-footer {
+    background-color: #005c93;
+    color: #fff;
+    font-size: .789rem;
+}
+
+.site-footer a {
+    color: #fff !important;
+    text-decoration: none;
+    font-size: .725rem;
+}
+.dropdown-menu{animation:myDelay .15s forwards}
+@keyframes myDelay{
+    0%{opacity:0;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}
+
+.dropdown:hover .dropdown-menu {display: block;}

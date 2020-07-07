@@ -29,7 +29,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
             <a class="dropdown-item dropdown sub-menu-link" href="/redirect.php"><h4><strong>Bank</strong></h4></a>
             <a class="dropdown-item sub-menu" href="/banking/checking.php">Checking ></a>
-            <a class="dropdown-item sub-menu" href="/redirect.php">Savings ></a>
+            <a class="dropdown-item sub-menu" href="/banking/savings.php">Savings ></a>
             <a class="dropdown-item sub-menu" href="/redirect.php">Certificates of Deposits (CDs) ></a>
             <a class="dropdown-item sub-menu" href="/redirect.php">Credit Cards ></a>
             <div class="dropdown-divider"></div>
@@ -69,10 +69,10 @@
           </form>
 -->
 <li>
-            <form method='post' action="">
+           <form method='post' action="">
                 <button type="submit" id="but_logout" name="but_logout" class="btn btn-light btn-signout">Sign out</button>
 </form>
-</li>
+</li class>
 
 <a class="btn btn-light btn-apply" button type="submit" a href="#">Open new account</a>
 </ul>

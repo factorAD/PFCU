@@ -37,7 +37,7 @@ $_SESSION['extra'] = '';
      <div class="section-header why-pfcu wide-header">
          <h2 class="landing-h1 why-pfcu">You're really going to like it here.</h2>
          <p>
-             Pigeon Forge Credit Union isn't better because we're bigger, we're bigger becausue we're better.
+             Pigeon Forge Credit Union isn't better because we're bigger, we're bigger because we're better.
 </p>
 </div>
 </section>
@@ -136,8 +136,44 @@ Learn exactly how to operate the website to start scambaiting with PFCU today.</
     <a class="button footer-button w-button" href="/apply">Get Started</a>
 </div>
 </div>
+<section class="site-footer">
+<footer class="container py-5 footer-bottom-wrapper page-wrapper site-footer">
+  <div class="row">
+    <div class="col-12 col-md-3">
+ 
+      <small class="d-block mb-3">&copy; 2020 Pigeon Forge Credit Union.</small>
+    </div>
+    <div class="col-6 col-md">
+      <h6>Contact Us</h6>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Branch & ATM Locations</a></li>
+        <li><a class="text-muted" href="#">(800 969-8762)</a></li>
+        <li><a class="text-muted">NMLS: 553781</a></li>
+        <li><a class="text-muted" href="#"><i class="fas fa-comment"></i> Chat</a></li>
+        <li><a class="text-muted" href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> Schedule Appointmennt</a></li>
+      </ul>
+    </div>
 
-
+    <div class="col-6 col-md">
+      <h6>About Us</h6>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Member Perks</a></li>
+        <li><a class="text-muted" href="#">Help Center</a></li>
+        <li><a class="text-muted" href="#">Contact Us</a></li>
+        <li><a class="text-muted" href="#">Company Profile</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Careers</a></li>
+        <li><a class="text-muted" href="#">News Center</a></li>
+        <li><a class="text-muted" href="#">Privacy</a></li>
+        <li><a class="text-muted" href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</section>
 
         <!-- Optional JavaScript -->
     <script>

@@ -58,8 +58,25 @@
 	cursor: pointer;
   padding-left: 1.3rem;
   border-color: transparent;
-  background-color: #efeeee;
+  background-color: #efeeee05;
   color: #00adf2;
+  margin-top: 0.725rem !important;
 }
 
+.dropdown:hover .dropdown-menu {display: block;}
 
+
+
+.box_shadow:after {
+  content: "";
+  width: 190px;
+  height: 10px;
+  margin-top: 98px;
+  margin-left: 5px;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  -webkit-box-shadow: 0px 0px 8px 2px #444444;
+     -moz-box-shadow: 0px 0px 8px 2px #444444;
+          box-shadow: 0px 0px 8px 2px #444444;
+}
