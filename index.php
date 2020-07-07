@@ -186,7 +186,7 @@ if(isset($_POST['but_logout'])){
 			
       <hr />
       <div id="errMsg">
-        
+       
             <?php if(!empty($_SESSION['errMsg'])) { echo $_SESSION['errMsg']; } ?>
         </div>
         <?php unset($_SESSION['errMsg']); ?>
