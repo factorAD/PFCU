@@ -1,9 +1,29 @@
+.breadcrumb-item {
+    font-size: .837rem;
+}
+.breadcrumb {
+    margin-right: -3.15%;
+    margin-bottom: 2.842em;
+    margin-left: -3.15%;
+    padding: .84rem 3.15% .842rem;
+    background: linear-gradient(120deg, #193061 0%, #007bff 100%);
+
+}
+
+.breadcrumb >.active {
+    color: #fff;
+ }
+
+ .breadcrumb >.active a {
+    color: #fff;
+ }
+
 #logontron{
     display: absolute;
     height: 26.250rem !important;
     width: 23rem !important;
     background-color: #fff;
-
+    
 }
 
 .usernameinput {
@@ -79,4 +99,196 @@
   -webkit-box-shadow: 0px 0px 8px 2px #444444;
      -moz-box-shadow: 0px 0px 8px 2px #444444;
           box-shadow: 0px 0px 8px 2px #444444;
+}
+
+.bubba {
+color: #343434 !important;
+}
+
+.transfercontainer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+
+.brokerageTransfer.payments {
+    background-color: #fff;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+}
+
+.col-lg-offset-8 {
+    margin-left: 66.66666667% !important;
+    margin-top: 2rem;
+}
+
+.cancelbtn{
+    box-sizing: border-box;
+    margin: .5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #D6D6D6;
+    border: none;
+    border-radius: .3125rem;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: background-color .4s ease,border-color .4s ease;
+    outline: transparent solid .0625rem;
+}
+
+
+.cancellabel{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #414042;
+    letter-spacing: 0;
+    text-decoration: none;
+}
+
+.transnextbtn{
+    box-sizing: border-box;
+    margin: .5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #0B6EFD;
+    border: none;
+    border-radius: .3125rem;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: background-color .4s ease,border-color .4s ease;
+    outline: transparent solid .0625rem;
+    width: 85px;
+}
+
+.transnextlabel{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0;
+    text-decoration: none;
+}
+
+.transload{
+    color:white;
+}
+
+.nudgeContainer{
+margin-top: 32px;
+cursor:pointer;
+
+}
+
+.imageContainer .nudgeContainer{
+    text-align: center;
+    background-color: #012f6b;
+    height: 90px;
+    width: 90px;
+}
+
+.bannerContainer{
+    padding-left: 28px;
+}
+
+.imageText {
+    display: inline-block;
+    color: #fff;
+    margin-top: 8px;
+}
+
+
+.NOTEDARK{
+    font-weight: 400;
+    font-size: 13px !important;
+    letter-spacing: 0;
+    text-decoration: none;
+}
+
+.textContainer{
+    height: 90px;
+    padding: 4px 250px 4px 32px;
+    border: 1px solid #000;
+    border-left: 0;
+}
+
+.nudgeTitle {
+    margin: 10px 0 2px;
+    color: #012f6b;
+    margin-left: 3rem;
+}
+
+.BODYLABEL{
+    font-size: .875rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-decoration: none;
+}
+
+.nudgeCaption {
+    margin: 0 0 11px;
+    margin-left: 3rem;
+}
+
+.BODY{
+    font-size: .875rem;
+    color: #414042;
+    font-weight: 400;
+    letter-spacing:0;
+    text-decoration: none;
+}
+
+.imageContainer img {
+    width: 40px;
+    margin-top: 2px;
+}
+
+
+.accountTransfer .nudgeContainer .bannerContainer, .brokerageTransfer .nudgeContainer .bannerContainer {
+    padding-left: 28px;
+}
+
+.imageContainer {
+    text-align: center;
+    background-color: #012f6b;
+    height: 90px;
+    width: 90px;
+}
+
+.extacc-button {
+    display: flex;
+    max-width: 80%;
+    text-align: center;
+    background-color: #128842;
+    color: #fff;
+    border-width: 0.5px;
+    border: 2px solid #eeeeee;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 6px;
+    box-sizing: border-box;
+    padding: .65rem 1.516rem;
+    font-weight: 10;
+    padding-bottom: 3px;
+    padding-top: 5px;
+    
+}
+.extacc-button:hover {
+    background-color:#128842;
+    opacity: 0.90;
+}
+a#extacc:hover{
+    color:#000000 !important;
+    font-weight: 200;
+}
+
+#transfertext {
+    color: #414141;
+}
+a#transfertext:hover {
+    color: #414141;
+    text-decoration-color: #818181 !important;
 }

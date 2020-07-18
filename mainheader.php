@@ -66,8 +66,30 @@
         <!-- <form class="form-inline">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button type="submit" class="btn btn-outline-light">Search</button>
-          </form>
--->
+          </form> -->
+
+<?php if( isset($_SESSION['username']) && !empty($_SESSION['username']) )
+{
+?>
+<li class="nav-item dropdown">
+<a class="btn btn-light btn-apply dropdown-toggle mr-2" data-toggle="dropdown" button type="submit" a href="/account"><?php echo $_SESSION['username'];?></a>
+<ul class = "dropdown-menu" role = "menu">
+<!-- <div class="dropdown-menu"> -->
+                    <a href="/account" class="dropdown-item">My account</a>
+                    <a href="#" class="dropdown-item">Open new account</a>
+                    
+                    <form method='post' action="">
+                <button type="submit" id="but_logout" name="but_logout" class="btn btn-light btn-lg btn-block btn-signout">Sign out</button>
+            </form>
+      </ul>
+<!-- </div> -->
+    <!-- <li>
+           <form method='post' action="">
+                <button type="submit" id="but_logout" name="but_logout" class="btn btn-light btn-signout">Sign out</button>
+            </form>
+    </li> -->
+
+    <?php }else{ ?>
 <a class="btn btn-light btn-securelogin" button type="submit" a href="/account/login.php"><i class="fa fa-lock mr-1" aria-hidden="true"></i>Secure Banking Login</a>
 <a class="btn btn-light btn-apply" button type="submit" a href="/apply">Become a Member</a>
 </ul>
@@ -77,6 +99,7 @@
         <input type="submit" class="search-button w-button" value="Search">
 </form>
 </div>
+<?php } ?>
 
 
       </ul>

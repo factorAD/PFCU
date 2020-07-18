@@ -76,8 +76,10 @@ if(isset($_POST['but_logout'])){
 			
 			<div class="col-md-8">
 				
-				<h3>Accounts</h3>
-				<hr />
+				<div class="row">
+					<div class="col-md-2"><h3>Accounts</h3></div>
+				<div class="col-md-2 ml-2" id="transfertext"><h3><a href="transfer.php" id="transfertext">Transfer</a></h3></div>
+		</div>
 				<table id='accounts' class="table table-striped">
 					<thead>
 						<tr>
@@ -144,6 +146,17 @@ if(isset($_POST['but_logout'])){
 						</tr>
 					</thead>
 				<tbody>
+
+<?php if( isset($_SESSION['transamount']) && !empty($_SESSION['transamount']) )
+{
+?>
+				<tr>
+				<td><?php echo date('m/d'); ?></td>
+				<td>PIGEON TRANSFER </td>
+				<td>Wire</td>
+				<td><b>-<?php echo $_SESSION ['transamount'] ?></b></td>
+		</tr>
+		<?php } ?>
 				<tr>
 				<td><?php echo date('m/d'); ?></td>
 				<td>APL*ITUNES.COM/BILL HOLD </td>

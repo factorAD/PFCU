@@ -80,7 +80,7 @@
                     <a href="/account" class="dropdown-item">My account</a>
                     <a href="#" class="dropdown-item">Open new account</a>
                     <form method='post' action="">
-                <button type="submit" id="but_logout" name="but_logout" class="btn btn-light btn-signout">Sign out</button>
+                    <button type="submit" id="but_logout" name="but_logout" class="btn btn-light btn-lg btn-block btn-signout">Sign out</button>
             </form>
       </ul>
 <!-- </div> -->

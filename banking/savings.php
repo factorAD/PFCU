@@ -3,6 +3,14 @@ $_SESSION['extra'] = '';
 
 ?>
 
+<?php
+include('../config.php');
+// logout
+if(isset($_POST['but_logout'])){
+  session_destroy();
+  header('Location: ../index.php');
+}
+?>
 
 
 <!doctype html>
@@ -34,7 +42,7 @@ $_SESSION['extra'] = '';
   
   <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item active ml-4"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active ml-4"><a href="../index.php">Home</a></li>
     <li class="breadcrumb-item active"><a href="#">Personal</a></li>
     <li class="breadcrumb-item active"><a href="#">Bank</a></li>
     <li class="breadcrumb-item active" aria-current="page">Savings Accounts</li>

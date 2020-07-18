@@ -199,7 +199,7 @@ if(isset($_POST['but_logout'])){
 <h1 class="card-title pricing-card-title rates-value"><?php echo $_SESSION['firstName'];?>,</h1>
 
 <h3>Earn up to $500 by referring friends.</h3>
-<p>Use the link below to invite your friends to bank with Chase. You'll get $50 for each friend who opens a new account</p>
+<p>Use the link below to invite your friends to bank with PFCU. You'll get $50 for each friend who opens a new account</p>
 <button class="btn btn-success" data-toggle="modal" data-target="#refer">Invite friends</button>
 <!-- if not logged in, show something else -->
 <?php }else{ ?>
@@ -420,7 +420,41 @@ Earn more interest, more returns, and more rewards with Pigeon Forge Credit Unio
     <a class="btn btn-success btn-md" href="#" role="button" data-toggle="modal" data-target="#modalRegisterForm">Get started</a>
   </p>
 </div>
-
+<footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+          <div class="col-12 col-md">
+            <img class="mb-2" src="../img/pigeon.png" alt="" width="24" height="24">
+            <small class="d-block mb-3 text-muted">&copy; 2020</small>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Branch & ATM Locations</a></li>
+        <li><a class="text-muted" href="#">(800 969-8762)</a></li>
+        <li><a class="text-muted">NMLS: 553781</a></li>
+        <li><a class="text-muted" href="#"><i class="fas fa-comment"></i> Chat</a></li>
+        <li><a class="text-muted" href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> Schedule Appointmennt</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About Us</h5>
+            <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Member Perks</a></li>
+        <li><a class="text-muted" href="#">Help Center</a></li>
+        <li><a class="text-muted" href="#">Contact Us</a></li>
+        <li><a class="text-muted" href="#">Company Profile</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+          <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Careers</a></li>
+        <li><a class="text-muted" href="#">News Center</a></li>
+        <li><a class="text-muted" href="#">Privacy</a></li>
+        <li><a class="text-muted" href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
 <!-- Footer -->
 <!-- <div id="footer">
 &copy; 2020 Pigeon Forge Credit Union | <a href="#">Terms & Conditions</a> | <a href="#">Privacy</a> | <a href="#">Security</a> | This is a fake bank

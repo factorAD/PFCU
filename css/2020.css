@@ -427,17 +427,17 @@ align-items: flex-start;
 	font-size:.895rem;
 	line-height: 1;
 	font-weight: 10;
-	border-radius: 36px;
+	/* border-radius: 36px; */
 	text-decoration: none;
 	display: inline-block;
 	cursor: pointer;
 	font-family: "logofont";
 	transition: all .4s ease;
-	box-sizing: border-box;
+	/* box-sizing: border-box; */
 	cursor: pointer;
   padding-left: 1.3rem;
   border-color: transparent;
-  background-color: #efeeee05;
+  background-color: #ffffff00;
   color: #00adf2;
   margin-top: 0.725rem !important;
 }
