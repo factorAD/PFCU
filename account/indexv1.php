@@ -4,7 +4,6 @@ $_SESSION['extra'] = '';
 ?>
 <?php
 include "../config.php";
-include "../account/balances.php";
 
 // Check user login or not
 if(!isset($_SESSION['username'])){
@@ -77,12 +76,11 @@ if(isset($_POST['but_logout'])){
 			
 			<div class="col-md-8">
 				
-				<div class="row tab">
-					<div class="col-md-2 ml-2 tablinks"><h3>Accounts</h3></div>
-					<div aria-hidden="true" class="nav-separator ml-3"></div>
-				<div class="col-md-2 ml-1 tablinks" id="transfertext"><h3 class="tabtext"><a href="transfer.php" id="transfertext">Transfer</a></h3></div>
+				<div class="row">
+					<div class="col-md-2"><h3>Accounts</h3></div>
+				<div class="col-md-2 ml-2" id="transfertext"><h3><a href="transfer.php" id="transfertext">Transfer</a></h3></div>
 		</div>
-				<table id='accounts' class="table table-striped recenttransactions">
+				<table id='accounts' class="table table-striped">
 					<thead>
 						<tr>
 							<th>Type</th>
@@ -96,28 +94,28 @@ if(isset($_POST['but_logout'])){
 						<tr>
 							<td onclick="myFunction()" style="cursor:pointer"><u>Personal Checking</u></td>
 							<td>****9218</td>
-							<td><?php echo "$".number_format($_SESSION['personal'], 2); ?></td>
+							<td>$9,337.00</td>
 							<td>$1,234.00</td>
 						</tr>
 	
 						<tr>
 							<td onclick="myFunction2()" style="cursor:pointer"><u>Platinum AARP Credit Card</u></td>
 							<td>****<?php echo $_SESSION ['username']; ?></td>
-							<td><?php echo "$".number_format($_SESSION['aarp'], 2); ?></td>
+							<td>$420.00</td>
 							<td>$24,580.00</td>
 						</tr>
 	
 						<tr>
 							<td onclick="myFunction3()" style="cursor:pointer"><u>Online Savings</u></td>
 							<td>****3218</td>
-							<td><?php echo "$".number_format($_SESSION['savings'], 2); ?></td>
+							<td>$19,293.44</td>
 							<td>$15,011.34</td>
 						</tr>
 	
 						<tr>
 							<td onclick="myFunction4()" style="cursor:pointer"><u>Roth IRA</u></td>
 							<td>****1930</td>
-							<td><?php echo "$".number_format($_SESSION['roth'], 2); ?></td>
+							<td>$86,753.09</td>
 							<td>$87,482.10</td>
 						</tr>
 				
@@ -156,7 +154,7 @@ if(isset($_POST['but_logout'])){
 				<td><?php echo date('m/d'); ?></td>
 				<td>PIGEON TRANSFER </td>
 				<td>Wire</td>
-				<td><b>-<?php echo "$".number_format($_SESSION['transamount'], 2); ?></b></td>
+				<td><b>-<?php echo $_SESSION ['transamount'] ?></b></td>
 		</tr>
 		<?php } ?>
 				<tr>
@@ -379,7 +377,7 @@ if(isset($_POST['but_logout'])){
 			<div class="col-md-4">
 				<h3>Pending Transactions</h3>
 				<hr />
-					<table id='accounts' class="table table-striped recenttransactions">
+					<table id='accounts' class="table table-striped">
 					<thead>
 						<tr>
 							<th>Date</th>
@@ -390,81 +388,74 @@ if(isset($_POST['but_logout'])){
 	
 					</thead>
 					<tbody>
-					<?php if( isset($_SESSION['transamount']) && !empty($_SESSION['transamount']) )
-						{
-						?>
 						<tr>
 							<td><?php echo date('m/d'); ?></td>
-							<td>PFCU Online Transfer</td>
-							<td><span class="badge badge-danger"><b>-<?php echo "$".number_format($_SESSION ['transamount']) ?></b><?php } ?></td>
-						</tr>
-							<td><?php echo date('m/d', strtotime('-1 days')); ?></td>
 							<td>APL*ITUNES.COM/BILL</td>
 							<td><span class="badge badge-danger">-50.00</td>
 						</tr>
 						
 						<tr>	
-							<td><?php echo date('m/d', strtotime('-1 days')); ?></td>
+							<td><?php echo date('m/d'); ?></td>
 							<td>Netflix</td>
 							<td><span class="badge badge-danger">-14.99</td>
 						</tr>
 						
 						<tr>
-							<td><?php echo date('m/d', strtotime('-3 days')); ?></td>
+							<td><?php echo date('m/d'); ?></td>
 							<td>CandyCrush Checkout</td>
 							<td><span class="badge badge-danger">-13.37</td>
 						</tr>
 						
 						<tr>
-							<td><?php echo date('m/d', strtotime('-3 days')); ?></td>
+							<td><?php echo date('m/d'); ?></td>
 							<td>Apple iTunes</td>
 							<td><span class="badge badge-danger">-50.00</td>
 						</tr>
 						
 						<tr>
-							<td><?php echo date('m/d', strtotime('-5 days')); ?></td>
+							<td><?php echo date('m/d'); ?></td>
 							<td>Checque #103 Deposit</td>
 							<td><span class="badge badge-success">$50.00</td>
 						</tr>
 	
 						<tr>
-							<td><?php echo date('m/d', strtotime('-5days')); ?></td>
+							<td><?php echo date('m/d'); ?></td>
 							<td>Social Security</td>
 							<td><span class="badge badge-success">$1,393.19</td>
 						</tr>
 						
 						<tr>
-							<td><?php echo date('m/d', strtotime('-9 day')); ?></td>
+							<td><?php echo date('m/d', strtotime('-1 day')); ?></td>
 							<td>AMZN MARKETPLACE</td>
 							<td><span class="badge badge-danger">-$100.00</td>
 						</tr>
 						
 						<tr>
-							<td><?php echo date('m/d', strtotime('-10 days')); ?></td>
+							<td><?php echo date('m/d', strtotime('-1 days')); ?></td>
 							<td>WINRAR/BILL</td>
 							<td><span class="badge badge-danger">-$30.00</td>
 						</tr>
 						
 
 						<tr>
-							<td><?php echo date('m/d', strtotime('-10 days')); ?></td>
+							<td><?php echo date('m/d', strtotime('-1 days')); ?></td>
 							<td>QVC*SHOPPING BILL</td>
 							<td><span class="badge badge-danger">-$140.50</td>
 						</tr>
 						
-<!-- 						
+						
 						<tr>
-							<td><?php echo date('m/d', strtotime('-12 days')); ?></td>
+							<td><?php echo date('m/d', strtotime('-2 days')); ?></td>
 							<td>Fashion Barn</td>
 							<td><span class="badge badge-danger">-$333.50</td>
 						</tr>
 						
 						
 						<tr>
-							<td><?php echo date('m/d',  strtotime('-14 days')); ?></td>
+							<td><?php echo date('m/d',  strtotime('-4 days')); ?></td>
 							<td>McDonald's</td>
 							<td><span class="badge badge-danger">-$18.20</td>
-						</tr> -->
+						</tr>
 					</tbody>
 				</table>
 

@@ -1,17 +1,25 @@
 <?php session_start(); 
 $_SESSION['extra'] = '';
+$_SESSION['personal'] = 9337;
 
 ?>
 <?php
 include('../config.php');
-include "../account/balances.php";
 // logout
 if(isset($_POST['but_logout'])){
   session_destroy();
   header('Location: ../index.php');
 }
 ?>
+<?php
+if(isset($_POST['buttrans'])){
+  sleep(2);
+  $transamount = mysqli_real_escape_string($con,$_POST['transamount']);
 
+  $_SESSION['transamount'] = $transamount;
+header('Location: ../account');
+}
+?>
 
 
 <!doctype html>
@@ -49,14 +57,7 @@ if(isset($_POST['but_logout'])){
     
   </ol>
 </nav>
-<div class="alertcontainer" name="alertcontainer" id="alertcontainer" style="display:none;">
-<div class="alert alert-success alert-dismissible fade show" role="alert" style="margin-top:0px" aria-hidden="true">
-		<i class="fa fa-check" aria-hidden="true"></i></i><strong> External account added successfully</strong>
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-</button>
-</div>
-</div>
+
 
 <section class="brokerageTransfer payments">
   <form method="post" action="">
@@ -69,24 +70,20 @@ if(isset($_POST['but_logout'])){
 
   <div class="row">
     <div class="col-6 col-md-4">
-      <select class="form-control styledselect" name="origin">
-        <option value="2">PERSONAL CHECKING (...9218): <?php echo "$".number_format($_SESSION['personal'], 2); ?></option>
-        <option value="3">PLATINUM AARP CREDIT CARD (...<?php echo $_SESSION ['username']; ?>): <?php echo "$".number_format($_SESSION['aarp'], 2); ?></option>
-        <option value="4">ONLINE SAVINGS (...3218): <?php echo "$".number_format($_SESSION['savings'], 2); ?></option>
-        <!-- <option value="5">ROTH IRA (...1930): $86,753.09</option> -->
+      <select class="form-control">
+        <option value="2">PERSONAL CHECKING (...9218): $9,337.00</option>
+        <option value="3">PLATINUM AARP CREDIT CARD (...<?php echo $_SESSION ['username']; ?>): $420.00</option>
+        <option value="4">ONLINE SAVINGS (...3218): $19,293.44</option>
+        <option value="5">ROTH IRA (...1930): $86,753.09</option>
       </select>
     </div>
     <div class="col-6 col-md-4">
-      <select class="form-control styledselect" name="destination" id="destination" required>
+      <select class="form-control" required>
         <option />
-        <option value="1" data-toggle="modal" class="externaladd" data-target="#externalaccount" data-backdrop="static" data-keyboard="false">Add new external account...</option>
-          <?php if( isset($_SESSION['routing']) && !empty($_SESSION['routing']) ){?>
-            <option value="6">External: <?php echo strtoupper($_SESSION ['accountname'])?> (...<?php echo $_SESSION['routingf'].")" ?></option>
-          <?php } ?> 
-        <option value="2">PERSONAL CHECKING (...9218): <?php echo "$".number_format($_SESSION['personal'], 2); ?></option>
-        <option value="3">PLATINUM AARP CREDIT CARD (...<?php echo $_SESSION ['username']; ?>): <?php echo "$".number_format($_SESSION['aarp'], 2); ?></option>
-        <option value="4">ONLINE SAVINGS (...3218): <?php echo "$".number_format($_SESSION['savings'], 2); ?></option>
-        <option value="5">ROTH IRA (...1930): <?php echo "$".number_format($_SESSION['roth'], 2); ?></option>
+        <option value="2">PERSONAL CHECKING (...9218): $9,337.00</option>
+        <option value="3">PLATINUM AARP CREDIT CARD (...<?php echo $_SESSION ['username']; ?>): $420.00</option>
+        <option value="4">ONLINE SAVINGS (...3218): $19,293.44</option>
+        <option value="5">ROTH IRA (...1930): $86,753.09</option>
       </select>
       <div class="invalid-feedback">
           Please tell us where the money is going.
@@ -127,75 +124,31 @@ if(isset($_POST['but_logout'])){
 
     <div class="col-lg-offset-8 col-lg-2 col-md-offset-8 col-md-2 col-sm-offset-6 col-sm-3 col-xs-6">
     <a href="/account" type="button" class="btn btn-lg cancelbtn"><span class="cancellabel">Cancel</span></a>
-    <button type="submit" class="btn btn-lg transnextbtn" id="buttrans" name="buttrans"><span class="transnextlabel">Next</span>
+    <button type="submit" class="btn btn-lg transnextbtn" id="buttrans" name="buttrans"><span class="transnextlabel">Next</span></a>
 
 </div>
 </form>
-
-
-
-<div class="modal fade" id="externalaccount" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static" aria-labelledby="externalaccount"
-  aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Add an External Account</h4>
-        <button type="button" class="close closefirstmodal">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-
-      <form method="post" action="" role="form" data-toggle="validator" novalidate="true">
-      <div class="modal-body ml-6">
-      <img class="w-100 rounded mx-auto d-block mb-3" src="../img/check_example.png" alt="Routing & account number location">
-      <div class="mb-3">
-      
-
-            <!-- <span class="input-group-addon mr-1"><i class="fa fa-user fa-2x"></i></span> -->
-            <label for="routingnumber ml-2" class="routingnumberlabel">Routing number</label>
-            <div class="form-group">
-            <input type="number" class="form-control ml-1" id="routing" name="routing" placeholder="" required="required" minlength="9" maxlength="9" data-error="Please enter a valid 9-digit routing number."></input>
-            <div class="help-block with-errors ml-1"></div> 
-             </div>
-             <label for="accountnumber ml-2" class="accountnumberlabel">Account number</label>
-            <div class="form-group">
-            <input type="number" class="form-control ml-1" id="accountno" name="accountno" placeholder="" required="required" minlength="11" maxlength="11" data-error="Please enter a valid 11-digit account number."></input>
-            <div class="help-block with-errors ml-1"></div> 
-             </div>
-             <div class="form-group">
-              <label for="accounttype ml-2" class="accountnumberlabel">Account type</label>
-                <select class="form-control" name="accounttype">
-                  <option>Checking</option>
-                  <option>Savings</option>
-                </select>
-              </div>
-
-              <label for="accountname ml-2" class="accountnumberlabel">Account nickname</label>
-              <div class="form-group">
-              <input type="text" class="form-control ml-1" id="accountname" name="accountname" placeholder="" required="required" minlength="4" maxlength="15" data-error="Please create an account nickname"></input>
-              <div class="help-block with-errors ml-1"></div>  
-            </div>
-              <div class="externalbtns">
-                <button type="button" class="btn cancelbtn extcancelbtn closefirstmodal"><span class="cancellabel">Cancel</span></a>
-                <button type="submit" class="btn externalaccountbtn" id="butext" name="butext"><span class="transnextlabel">Next</span>
-              </div>
+<?php if( isset($_SESSION['success']) && !empty($_SESSION['success']) )
+{
+?>
+<div class="container success">
+  <h5>success</h5>
 </div>
-</form>
+<?php } ?>
+
+
+<!-- <p>
+<?php 
+$sum_total = $_SESSION ['personal'] - $_SESSION ['transamount'] ; 
+echo ($sum_total);?>
+
+
+<!-- <?php echo $_SESSION ['personal'] - $_SESSION ['transamount'] ; ?>
+<?php echo $_SESSION ['transamount'] ?> -->
+</p> -->
+
 </section>
 
-<div id="Warning" class="modal fade" role="dialog" data-backdrop="false">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-body">
-              <h4>Are you sure you want to leave?</h4><br>
-                <p>You haven't saved your changes yet, and you'll lose them if you leave the page.</p>
-                <button type="button" class="btn cancelbtn extcancelbtn removeblur" data-dismiss="modal"><span class="cancellabel">Don't leave</span></button>
-                <button type="button" class="btn externalaccountbtn confirmclosed"><span class="transnextlabel">Leave</span></button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="container nudgeContainer">
 <div class="row no-gutters">
@@ -260,7 +213,7 @@ if(isset($_POST['but_logout'])){
           location.href = "../redirect.php";
       } 
     </script>
-<script>
+ <script>
   $('select').on('change', function() {
   $('option').prop('disabled', false);
   $('select').each(function() {
@@ -310,7 +263,7 @@ function onBlur(e){
 </script> -->
 <script>
   $(document).ready(function() {
-  $('.transnextbtn').on('click', function() {
+  $('.btn').on('click', function() {
     var $this = $(this);
     var loadingText = '<i class="fa fa-spinner fa-spin transload"></i>';
     if ($(this).html() !== loadingText) {
@@ -324,16 +277,13 @@ function onBlur(e){
 })
 </script>
 <script>
-$("#destination").change(function () {
-    if ($(this).val() == "1") {
-        $('#externalaccount').modal('show');
-      }
- })
-//   function openPopup() {
-//     $("#externalaccount").modal();
-// }
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+$('.popover-dismiss').popover({
+  trigger: 'focus'
+})
 </script>
-
 
   
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -342,46 +292,6 @@ $("#destination").change(function () {
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
-
-    <!-- <script>
-      //jQuery and Bootstrap Lib's always comes first
-$(document).ready(function () { //Dom Ready
-    $('.closefirstmodal').click(function () { //Close Button on Form Modal to trigger Warning Modal
-        $('#Warning').modal('show').on('show.bs.modal', function () { //Show Warning Modal and use `show` event listener
-            $('.confirmclosed').click(function () { //Waring Modal Confirm Close Button
-                $('#Warning').modal('hide'); //Hide Warning Modal
-                $('#externalaccount').modal('hide'); //Hide Form Modal
-            });
-        });
-    });
-});
-
-</script> -->
-<script>
-	$(document).ready(function () {
-	    $('.closefirstmodal').click(function () {
-        $('#externalaccount').addClass('blur');
-          $('#Warning').modal('show');
-	    });
-
-	    $('.confirmclosed').click(function () {
-        location.reload();
-return false;
-	        // $('#Warning').modal('hide');
-          // $('#externalaccount').modal('hide');
-          // $('#externalaccount').removeClass('blur');
-          
-      });
-      
-       $('.removeblur').click(function () {
-         $('#externalaccount').removeClass('blur');
-       });
-	});
-</script>
-
-
-
 
 </body>
 </html>

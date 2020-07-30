@@ -208,13 +208,13 @@ if(isset($_POST['but_logout'])){
 				
 					<div class="col">
 					
-						<input id="txtusername" class="form-control" type="text" name="txtusername" placeholder="username" required/>
+						<input id="txtusername" class="form-control" type="text" name="txtusername" placeholder="username"  tabindex="1" required/>
 				
 					</div></div>
 					
 					<div class="row pt-1">
 					<div class="col">				
-            <input class="form-control" id="txtpassword" type="password" name="txtpassword" placeholder="password" required/> 
+            <input class="form-control" id="txtpassword" type="password" name="txtpassword" placeholder="password" tabindex="2" required/> 
             
           
 					</div>
@@ -225,7 +225,7 @@ if(isset($_POST['but_logout'])){
           <label class="form-check-label" for="rememberme">Remember Me</label>
           </div>	
           <div class="spacer"></div>
-      <button type="submit" value="Submit" id="butlogin" name="butlogin" class="btn btn-success">Log In</button>
+      <button type="submit" value="Submit" id="butlogin" name="butlogin" class="btn btn-success" tabindex="3">Log In</button>
 
       <button class="btn btn-primary" href="#" data-toggle="modal" data-target="#modalRegisterForm">Apply Today</button>
 

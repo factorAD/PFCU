@@ -3,8 +3,8 @@
 <nav class="navbar navbar-expand-lg navbar-light loginheader" style="background-color: #fff;">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
-      <img src="/img/pigeon.png" width="30" height="30" class="d-inline-block align-top" alt="PFCU"></a>
-      <span class="navbar-brand logofont mb-0 h1">Pigeon Forge Credit Union</span>
+      <img src="/img/pigeon.png" width="30" height="30" class="d-inline-block align-top mb-2" alt="PFCU"></a>
+      <span class="navbar-brand logofont mb-3 h1">Pigeon Forge Credit Union</span>
 
       
 

@@ -115,9 +115,9 @@ At PFCU, the emphasis on delivering real value to our members has been job one, 
     <div class="reverse why-pfcu-row">
         <div class="content-col why-pfcu-col">
             <div class="why-pfcu-content">
-                <h2 class="why-pfcu-h2">Save time scambaiting. Spend time with the truly valuable.</h2>
+                <h2 class="why-pfcu-h2">Spend time with the truly valuable.</h2>
                 <p>
-Our fake website acts and operates like the real deal, because it "is" the real deal. To the scammers. Lol.
+Our fake website acts and operates like the real deal, because "it is" the real deal.
 <br>
 Learn exactly how to operate the website to start scambaiting with PFCU today.</p>
 <div>

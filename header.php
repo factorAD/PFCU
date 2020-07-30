@@ -3,8 +3,8 @@
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fff;">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
-      <img src="/img/pigeon.png" width="30" height="30" class="d-inline-block align-top" alt="PFCU"></a>
-      <span class="navbar-brand mb-0 h1">Pigeon Forge Credit Union</span>
+      <img src="/img/pigeon.png" width="30" height="30" class="d-inline-block align-top mb-2" alt="PFCU"></a>
+      <span class="navbar-brand logofont mb-3 h1">Pigeon Forge Credit Union</span>
 
       
 
@@ -15,8 +15,8 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/redirect.php">Why PFCU</a>
+      <li class="nav-item dropdown">
+          <a class="nav-link whypfcu" id="whypfcu" href="/why-pfcu">Why PFCU</a>
         </li>
 
         <li class="nav-item dropdown">

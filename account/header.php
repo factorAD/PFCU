@@ -3,8 +3,8 @@
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fff;">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
-      <img src="/img/pigeon.png" width="30" height="30" class="d-inline-block align-top" alt="PFCU"></a>
-      <span class="navbar-brand logofont mb-0 h1">Pigeon Forge Credit Union</span>
+      <img src="/img/pigeon.png" width="30" height="30" class="d-inline-block align-top mb-2" alt="PFCU"></a>
+      <span class="navbar-brand logofont mb-3 h1">Pigeon Forge Credit Union</span>
 
       
 
@@ -17,7 +17,7 @@
       
       <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">
-          <a class="nav-link whypfcu" href="../why-pfcu">Why PFCU</a>
+          <a class="nav-link whypfcu" id="whypfcu" href="../why-pfcu">Why PFCU</a>
         </li>
 
 
@@ -68,20 +68,36 @@
             <button type="submit" class="btn btn-outline-light">Search</button>
           </form>
 -->
-<li>
+<!-- <li>
            <form method='post' action="">
                 <button type="submit" id="but_logout" name="but_logout" class="btn btn-light btn-signout">Sign out</button>
 </form>
-</li class>
+</li>
 
 <a class="btn btn-light btn-apply" button type="submit" a href="#">Open new account</a>
-</ul>
-<div class="search-form w-form">
-        <form class="form-inline">
+</ul> -->
+
+
+
+<li class="nav-item dropdown">
+<a class="btn btn-light btn-apply dropdown-toggle mr-2" data-toggle="dropdown" button type="submit" a href="/account"><?php echo $_SESSION['username'];?></a>
+      <ul class = "dropdown-menu" role = "menu">
+<!-- <div class="dropdown-menu"> -->
+                    <a href="/account" class="dropdown-item">My account</a>
+                    <a href="#" class="dropdown-item">Open new account</a>
+                    <form method='post' action="">
+                    <button type="submit" id="but_logout" name="but_logout" class="btn btn-light btn-lg btn-block btn-signout">Sign out</button>
+            </form>
+      </ul>
+</li>
+
+<!-- 
+<div class="search-form w-form mt-3">
+    <form class="form-inline">
         <input type="text" class="search-field w-input" placeholder="Search" value name="q" id="s" autocomplete="off">
         <input type="submit" class="search-button w-button" value="Search">
-</form>
-</div>
+     </form>
+</div> -->
 
 
       </ul>

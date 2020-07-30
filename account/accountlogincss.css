@@ -3,7 +3,7 @@
 }
 .breadcrumb {
     margin-right: -3.15%;
-    margin-bottom: 2.842em;
+    margin-bottom: 0.1rem !important;
     margin-left: -3.15%;
     padding: .84rem 3.15% .842rem;
     background: linear-gradient(120deg, #193061 0%, #007bff 100%);
@@ -68,17 +68,17 @@
 	font-size:.895rem;
 	line-height: 1;
 	font-weight: 10;
-	border-radius: 36px;
+	/* border-radius: 36px; */
 	text-decoration: none;
 	display: inline-block;
 	cursor: pointer;
 	font-family: "logofont";
 	transition: all .4s ease;
-	box-sizing: border-box;
+	/* box-sizing: border-box; */
 	cursor: pointer;
   padding-left: 1.3rem;
   border-color: transparent;
-  background-color: #efeeee05;
+  background-color: #ffffff00;
   color: #00adf2;
   margin-top: 0.725rem !important;
 }
@@ -117,6 +117,7 @@ color: #343434 !important;
     margin-left: auto;
     margin-right: auto;
     min-height: 100%;
+    margin-top: 1.5rem;
 }
 
 .col-lg-offset-8 {
@@ -286,9 +287,158 @@ a#extacc:hover{
 }
 
 #transfertext {
-    color: #414141;
+    color: #007bff;
 }
 a#transfertext:hover {
     color: #414141;
     text-decoration-color: #818181 !important;
 }
+
+/* .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  } */
+  
+.tab .tablinks {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 5px;
+    transition: 0.3s;
+  }
+  
+.tablinks:hover {
+    background-color: #ddd;
+  }
+
+  .tablinks:active {
+    background-color: #ccc;
+  }
+
+  /* .tablinks{
+      justify-content: left;
+  }
+
+  .tabtext {
+      justify-content: left;
+  } */
+
+  .accountnav{
+      justify-content: center;
+  }
+
+  .routingnumberlabel {
+      font-weight: 530 !important;
+      color: #717171;
+      text-shadow: 0px 1px 1px #c7c7c7;
+  }
+
+  .accountnumberlabel {
+    font-weight: 530 !important;
+    color: #717171;
+    text-shadow: 0px 1px 1px #c7c7c7;
+}
+
+.recenttransactions{
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+}
+
+.externalaccountbtn{
+    box-sizing: border-box;
+    margin: .5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #0B6EFD;
+    border: none;
+    border-radius: .3125rem;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: background-color .4s ease,border-color .4s ease;
+    outline: transparent solid .0625rem;
+    width: 200px;
+}
+
+
+.extcancelbtn{
+    box-sizing: border-box;
+    margin: .5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #D6D6D6;
+    border: none;
+    border-radius: .3125rem;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: background-color .4s ease,border-color .4s ease;
+    outline: transparent solid .0625rem;
+    width: 200px;
+}
+
+
+.has-error input[type="text"], .has-error input[type="email"], .has-error input[type="number"],.has-error select {
+    border: 2px solid rgb(191, 33, 85);
+}
+
+.has-error{
+color: rgb(191, 33, 85) !important;
+}
+
+.externaladd{
+    color: #128842;
+    font-weight: 500;
+}
+
+.externaladd:hover{
+    background-color: #121212;
+}
+
+.brokerageTransfer .styledselect {
+    border: .0625rem solid rgba(0,0,0,.17);
+    box-shadow: 0 0.075rem 0.138rem rgba(0,0,0,.28);
+    padding: .0625rem;
+    margin: 0;
+    background: #FFF;
+    z-index: 999;
+    text-align: left;
+    position: absolute;
+    width: 95%;
+    height: 100%;
+}
+
+.brokerageTransfer #option {
+    border: .0625rem solid rgba(0,0,0,.17);
+    box-shadow: 0 0.075rem 0.138rem rgba(0,0,0,.28);
+    padding: .0625rem;
+    margin: 0;
+    background: #FFF;
+    z-index: 999;
+    text-align: left;
+    position: absolute;
+    width: 95%;
+    height: 100%;
+}
+
+.blur {
+    /* box-shadow: 0px 0px 20px 20px rgba(255,255,255,1);
+    text-shadow: 0px 0px 10px rgba(51, 51, 51, 0.9); */
+    transform: scale(0);
+    /* opacity: 0.9; */
+}
+
+.extdroplabel{
+    font-weight: 590px;
+    color:#0B6EFD;
+}
+
+.alertcontainer{
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
